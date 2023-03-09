@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster
+FROM python:3.8-slim-buster
 
 WORKDIR /backend-flask
 COPY requirements.txt requirements.txt
@@ -8,4 +8,4 @@ COPY . .
 ENV FLASK_ENV=development
 EXPOSE ${PORT}
 
-CMD ["python3", "-m", "flask run","--host=0.0.0.0","--port=4567"]
+CMD ["which python3", "python3", "-m", "flask run","--host=0.0.0.0","--port=4567"]
